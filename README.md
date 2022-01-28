@@ -1,6 +1,6 @@
 # CuLSM-CPU
 
-**This is the cpu version of [CuLSM](https://github.com/Chiang-Yuan/culsm)**
+:warning: **This is the cpu version of [CuLSM](https://github.com/Chiang-Yuan/culsm)**
 
 **Cuda-accelerated lattice spring model (CuLSM)** is the CUDA C++ code implementing GPU parallelization on particle and spring lists. The code is associated with the paper "[ImageMech: From Image to Particle Spring Network for Mechanical Characterization](https://www.frontiersin.org/articles/10.3389/fmats.2021.803875/full)" published in [Frontiers in Materials](https://www.frontiersin.org/journals/materials). 
 
