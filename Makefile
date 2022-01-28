@@ -7,7 +7,7 @@ NVCC    = 	nvcc
 CUDIR   = 	/usr/local/cuda
 NVFLAGS = 	-O3 -I$(CUDIR)/include -m64 -arch=compute_75 -code=sm_75 -Xptxas -v -rdc=true
 
-TARGET	=	culsm
+TARGET	=	culsm-cpu
 
 SRC_DIRS	?=	./src
 
@@ -18,16 +18,17 @@ OBJS	= 	$(SRCS:.c=.o)
 
 INC		= 	-I/src
 LFLAGS	= 
-LIBS    =	-lm -lcudart
+#LIBS    =	-lm -lcudart
+LIBS	=	-lm
 
 MKFILE	= 	Makefile 
 
 
 $(TARGET) : $(OBJS)
-		$(NVCC) $(NVFLAGS) $(INC) -o $(TARGET) $(OBJS) $(LFLAGS) $(LIBS)
+		$(CPP) $(CFLAGS) $(INC) -o $(TARGET) $(OBJS) $(LFLAGS) $(LIBS)
 
 .c.o:
-		$(NVCC) $(NVFLAGS) $(INC) -c $< -o $@
+		$(CPP) $(CFLAGS) $(INC) -c $< -o $@
 
 
 .PHONY: clean

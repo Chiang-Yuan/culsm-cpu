@@ -7,7 +7,7 @@
 #ifndef CULSM_H
 #define CULSM_H
 
-#define CULSM_VERSION "v1.0 / 12 Jan 2022"
+#define CULSM_VERSION "v1.0 / 28 Jan 2022"
 
 #define WHITESPACE " \t\r\n\f"
 
@@ -44,7 +44,7 @@ typedef long long bigint;
 #include <cmath>
 #include <limits>
 
-#include <cuda.h>
-#include <cuda_runtime.h>
+// #include <cuda.h>
+// #include <cuda_runtime.h>
 
 #endif // !CULSM_H

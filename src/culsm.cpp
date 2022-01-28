@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
 	time_t tstr, tend;
 	time(&tstr);
 	printf("=====================================================================\n");
-	printf("CULSM (%s) starts at %s", CULSM_VERSION, ctime(&tstr));
+	printf("CULSM-CPU (%s) starts at %s", CULSM_VERSION, ctime(&tstr));
 	printf("=====================================================================\n");
 	
 
@@ -178,7 +178,7 @@ int main(int argc, char *argv[]) {
 	int seconds = (int)difftime(tend, tstr);
 	printf("Total time: %d:%02d:%02d\n", seconds/3600, (seconds%3600)/60, seconds%60);
 	printf("=====================================================================\n");
-	printf("CULSM (%s) ends at %s", CULSM_VERSION, ctime(&tend));
+	printf("CULSM-CPU (%s) ends at %s", CULSM_VERSION, ctime(&tend));
 	printf("=====================================================================\n");
     return 0;
 }
@@ -285,7 +285,7 @@ int main(int argc, char *argv[]) {
 		time_t localtime;
 		time(&localtime);
 		printf("=====================================================================\n");
-		printf("CULSM (%s) starts at %s", CULSM_VERSION, ctime(&localtime));
+		printf("CULSM-CPU (%s) starts at %s", CULSM_VERSION, ctime(&localtime));
 		printf("=====================================================================\n");
 
 		int n = 1;
@@ -325,7 +325,7 @@ int main(int argc, char *argv[]) {
 		}
 		time(&localtime);
 		printf("=====================================================================\n");
-		printf("CULSM (%s) ends at %s", CULSM_VERSION, ctime(&localtime));
+		printf("CULSM-CPU (%s) ends at %s", CULSM_VERSION, ctime(&localtime));
 		printf("=====================================================================\n");
 	}
 
