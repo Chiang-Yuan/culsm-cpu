@@ -42,17 +42,25 @@ make
 ```
 
 ## Example Command Script
-
 ```
+# read lammps data file
 read_data       <file>
 
+# set particle mass by type
 mass            <type> <mass>
 
+# set spring type and coefficients
 bond            <type> <bond type> <coeff 1> <coeff 2> ... <coeff n>
 
+# displace certain type of particles every timestep
 fix             <type> <disp x> <disp y> <disp z>
 
-dump            <file name> <n>
+# save particle trajectory every N timesteps to file
+dump            <file name> <timesteps>
 
+# output thermodynamic observables every N timesteps
+thermo          <timesteps>
+
+# verlocity Verlet integration for N timesteps of dt seconds
 run             <dt> <timesteps>
 ```
